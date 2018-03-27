@@ -26,6 +26,8 @@ scp $sshd_file root@$server_ip:/etc/ssh/sshd_config
 
 ssh -l root $server_ip "systemctl restart sshd.service"
 
+ssh -l $server_username $server_ip "sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y git && git clone https://github.com/rafamoreira/provision.git ~/provision"
+
 ssh -l $server_username $server_ip "mkdir -p /home/$server_username/server_status"
 
-ssh -l $server_username $server_ip "touch /home/$server_username/server_status/1.bash.done"
+ssh -l $server_username $server_ip "touch /home/$server_username/server_status/1.basics.done"
