@@ -3,7 +3,7 @@
 if [ ! -f ~/server_status/rbenv ]
 then
     sudo apt-get update
-    sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+    sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev build-essential
 
     RBENV_ROOT="$HOME/.rbenv"
 
