@@ -16,4 +16,7 @@ then
     fi
 
     rbenv rehash
+
+    touch ~/.gemrc
+    echo "gem: --no-document" > ~/.gemrc
 fi
