@@ -14,6 +14,7 @@ then
     git clone https://github.com/rbenv/ruby-build.git $RBENV_ROOT/plugins/ruby-build
     git clone https://github.com/rkh/rbenv-whatis.git $RBENV_ROOT/plugins/rbenv-whatis
     git clone https://github.com/rkh/rbenv-use.git $RBENV_ROOT/plugins/rbenv-use
+    git clone https://github.com/sstephenson/rbenv-vars.git $RBENV_ROOT/plugins/rbenv-vars
 
     cd $RBENV_ROOT && src/configure && make -C src
 

@@ -3,7 +3,7 @@
 if [ ! -f ~/server_status/pg ]
 then
     sudo apt-get update
-    sudo apt-get install -y postgresql postgresql-contrib
+    sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 
     echo "PG USER?"
     read PGUSER
