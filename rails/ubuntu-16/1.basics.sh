@@ -8,6 +8,9 @@ read server_username
 echo "server ip or hostname?"
 read server_ip
 
+echo "server name to ssh config? "
+read server_name
+
 ssh -l root $server_ip "adduser $server_username"
 
 ssh -l root $server_ip "usermod -aG sudo $server_username"
@@ -31,3 +34,9 @@ ssh -l $server_username $server_ip "sudo apt-get update && sudo apt-get upgrade 
 ssh -l $server_username $server_ip "mkdir -p /home/$server_username/server_status"
 
 ssh -l $server_username $server_ip "touch /home/$server_username/server_status/1.basics.done"
+
+echo "
+Host $server_name
+     Hostname $server_ip
+     Port 22
+     User $server_username" >> ~/.ssh/config
