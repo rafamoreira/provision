@@ -2,10 +2,10 @@
 
 sudo apt-get install -y zsh stow
 
-git clone https://github.com/rafamoreira/dotfiles.git ~/dotfiles
+git clone https://github.com/rafamoreira/dotfiles-server.git ~/dotfiles
 
 chsh -s /bin/zsh
 
 cd ~/dotfiles
 
-stow emacs git ruby vim zsh.grml
+stow emacs git vim zsh.grml
