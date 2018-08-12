@@ -3,7 +3,7 @@
 echo "create db? (y or n)"
 read isdb
 
-if [ $isdb=="y" ]
+if [[ $isdb == "y" ]]
 then
     echo "db name: "
     read dbname
