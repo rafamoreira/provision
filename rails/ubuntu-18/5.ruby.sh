@@ -10,7 +10,7 @@ then
     echo "global? (y or n)"
     read rubyglobal
 
-    if [ $rubyglobal=="y" ]
+    if [[ $rubyglobal == "y" ]]
     then
         rbenv global $rubyv
     fi
